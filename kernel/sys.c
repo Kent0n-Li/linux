@@ -148,6 +148,12 @@ int fs_overflowgid = DEFAULT_FS_OVERFLOWGID;
 EXPORT_SYMBOL(fs_overflowuid);
 EXPORT_SYMBOL(fs_overflowgid);
 
+SYSCALL_DEFINE0(zwhsyscall)
+{
+	printk("Hello,this is zwh's syscall test!");
+	return 0;
+}
+
 /*
  * Returns true if current's euid is same as p's uid or euid,
  * or has CAP_SYS_NICE to p's user_ns.
